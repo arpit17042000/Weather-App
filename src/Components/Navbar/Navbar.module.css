@@ -1,0 +1,10 @@
+.Navbar{
+   background-color: rgb(33, 146, 146);
+    padding: 20px;
+}
+
+.Navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 60px;
+}

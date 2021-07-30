@@ -1,0 +1,14 @@
+.Cities{
+   justify-content: center;
+   align-items: center;
+}
+
+.button{
+    color: white;
+    padding: 14px;
+    background-color: rgb(32, 143, 143);
+    margin: 26px;
+    width: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+}
