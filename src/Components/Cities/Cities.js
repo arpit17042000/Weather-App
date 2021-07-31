@@ -26,30 +26,34 @@ class Cities extends Component{
             <button onClick={()=>{
                 this.setState({day1:!this.state.day1})
             }} className={classes.button}>Day1</button>
-            {
-                this.state.day1?(<Day1/>):null
-            }
+            
             <button onClick={()=>{
                 this.setState({day2:!this.state.day2})
             }} className={classes.button}>Day2</button>
-            {
-                this.state.day2?(<Day2/>):null
-            }
+            
             <button  onClick={()=>{
                 this.setState({day3:!this.state.day3})
             }} className={classes.button}>Day3</button>
-            {
-                this.state.day3?(<Day3/>):null
-            }
+            
             <button  onClick={()=>{
                 this.setState({day4:!this.state.day4})
             }} className={classes.button}>Day4</button>
-            {
-                this.state.day4?(<Day4/>):null
-            }
+            
             <button  onClick={()=>{
                 this.setState({day5:!this.state.day5})
             }} className={classes.button}>Day5</button>
+            {
+                this.state.day1?(<Day1/>):null
+            }
+            {
+                this.state.day2?(<Day2/>):null
+            }
+            {
+                this.state.day3?(<Day3/>):null
+            }
+            {
+                this.state.day4?(<Day4/>):null
+            }
             {
                 this.state.day5?(<Day5/>):null
             }
