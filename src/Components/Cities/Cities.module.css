@@ -12,3 +12,12 @@
     border-radius: 10px;
     cursor: pointer;
 }
+
+.cityName{
+    color: white;
+    padding: 14px;
+    background-color: rgb(32, 143, 143);
+    margin: 26px;
+    width: 52px;
+    border-radius: 10px;
+}

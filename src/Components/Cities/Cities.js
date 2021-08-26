@@ -6,7 +6,7 @@ import Day2 from './City/Day2'
 import Day4 from './City/Day4'
 import Day5 from './City/Day5'
  import classes from './Cities.module.css'
-
+ import axios from 'axios'
 
 
 class Cities extends Component{
@@ -16,12 +16,22 @@ class Cities extends Component{
         day2:false,
         day3:false,
         day4:false,
-        day5:false
+        day5:false,
+        name:null
      }
+     componentDidMount(){
+        axios.get('https://api.openweathermap.org/data/2.5/forecast?q=München,DE&units=metric&appid=b606f9db39d148829c9500a2651c63dd').then(
+            response=>{
+                this.setState({name:response.data.city.name})
+            }
+        )
+    }
 
     render(){
         
     return (
+        <div>
+            <div className={classes.cityName}>{this.state.name}</div>
         <div className={classes.Cities}>
             <button onClick={()=>{
                 this.setState({day1:!this.state.day1})
@@ -58,6 +68,8 @@ class Cities extends Component{
                 this.state.day5?(<Day5/>):null
             }
         </div>
+        </div>
+        
         
     )
     }

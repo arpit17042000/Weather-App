@@ -26,7 +26,7 @@ class Day1 extends Component {
                 else{
                     this.setState({Precipitation:'none'})
                 }
-                // console.log(response)
+                 console.log(response)
             }
         )
     }
