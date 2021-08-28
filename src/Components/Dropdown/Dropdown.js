@@ -1,8 +1,15 @@
 import React, { Component } from "react";
 
+
 class Dropdown extends Component {
   state = {
     value: " ",
+    lists: [
+      { id: "1", country: "India" },
+      { id: "2", country: "America" },
+      { id: "3", country: "Russia" },
+      { id: "4", country: "China" },
+    ],
   };
 
   handleChange = (event) => {
@@ -11,19 +18,19 @@ class Dropdown extends Component {
 
   handleSubmit = (event) => {
     alert("A name was submitted: " + this.state.value);
-    //event.preventDefault();
   };
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
-          Pick your favorite flavor:
+          Pick your Country:
           <select value={this.state.value} onChange={this.handleChange}>
-            <option value="grapefruit">Grapefruit</option>
-            <option value="lime">Lime</option>
-            <option value="coconut">Coconut</option>
-            <option value="mango">Mango</option>
+            {this.state.lists.map((list) => (
+              <option value={list.country} key={list.id}>
+                {list.country}
+              </option>
+            ))}
           </select>
         </label>
         <input type="submit" value="Submit" />
